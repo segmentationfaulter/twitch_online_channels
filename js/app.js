@@ -1,3 +1,3 @@
 $(document).ready(() => {
-  'use strict'
-})
+  'use strict';
+});
