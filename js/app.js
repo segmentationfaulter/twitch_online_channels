@@ -24,6 +24,14 @@ $(document).ready(() => {
 
   // ajax request success callback
   function success(response) {
-    console.log(response);
+    let streamStatus;
+    if (response.stream === null) {
+      streamStatus = 'Offline';
+    }
+    else {
+      streamStatus = 'Live';
+    }
+    let html = `<li><span id="stream-status">${streamStatus}</span></li>`;
+    $('#channels').append(html);
   }
 });
